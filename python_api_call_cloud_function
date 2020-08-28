@@ -1,0 +1,13 @@
+import sys
+import requests
+
+
+def main(dict):
+	url="https://en.wikipedia.org/api/rest_v1/page/summary/cow?redirect=true"
+	headers = {
+    'Content-Type': "application/x-www-form-urlencoded",
+    'cache-control': "no-cache"
+    }
+    response=requests.request("GET",url)
+    print response.text
+    return { 'message': 'Hello world' }
